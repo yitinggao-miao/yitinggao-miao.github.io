@@ -23,7 +23,7 @@ This site presents Yiting Gao's academic profile, research interests, education,
 ├── research-visual.png         # ESR-STM and quantum dot visual asset
 ├── photos/                     # Original travel photos
 ├── .nojekyll                   # Keeps GitHub Pages from applying Jekyll processing
-└── .github/workflows/pages.yml # GitHub Pages deployment workflow
+└── .gitignore                  # Local ignored files
 ```
 
 ## Local Preview
@@ -54,21 +54,16 @@ Design changes belong in `styles.css`. The only JavaScript behavior is the respo
 
 ## Deployment
 
-The site deploys through GitHub Actions whenever changes are pushed to `main`.
-
-GitHub Pages settings:
+This repository is a static GitHub Pages user site. Configure Pages once in GitHub:
 
 ```text
-Settings -> Pages -> Build and deployment -> Source -> GitHub Actions
+Settings -> Pages -> Build and deployment
+Source: Deploy from a branch
+Branch: main
+Folder: / (root)
 ```
 
-If the first workflow run fails with `Get Pages site failed`, open the repository on GitHub and set:
-
-```text
-Settings -> Pages -> Build and deployment -> Source -> GitHub Actions
-```
-
-Then rerun the failed workflow.
+After that, pushes to `main` publish the site automatically.
 
 To publish updates:
 
