@@ -5,7 +5,7 @@ Personal academic website for Yiting Gao, built as a lightweight static site and
 Live site:
 
 ```text
-https://yitinggao.github.io
+https://yitinggao-miao.github.io
 ```
 
 ## Overview
@@ -62,6 +62,14 @@ GitHub Pages settings:
 Settings -> Pages -> Build and deployment -> Source -> GitHub Actions
 ```
 
+If the first workflow run fails with `Get Pages site failed`, open the repository on GitHub and set:
+
+```text
+Settings -> Pages -> Build and deployment -> Source -> GitHub Actions
+```
+
+Then rerun the failed workflow.
+
 To publish updates:
 
 ```bash
@@ -75,5 +83,5 @@ git push
 The canonical URL and sitemap currently assume the GitHub Pages repository will be:
 
 ```text
-yitinggao.github.io
+yitinggao-miao.github.io
 ```

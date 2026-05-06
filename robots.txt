@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://yitinggao.github.io/sitemap.xml
+Sitemap: https://yitinggao-miao.github.io/sitemap.xml
