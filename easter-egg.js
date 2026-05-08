@@ -2,6 +2,8 @@ const easterImage = document.getElementById("easter-carousel-image");
 
 if (window.sessionStorage.getItem("easterUnlocked") !== "true") {
   window.location.replace("index.html");
+} else {
+  window.alert("凭此兑换520现金奖励");
 }
 
 if (easterImage) {
