@@ -675,7 +675,7 @@ h3 {
   font-weight: 850;
 }
 
-.reward-close {
+.reward-claim {
   min-height: 42px;
   padding: 0.55rem 1.2rem;
   border: 1px solid rgba(23, 107, 92, 0.28);
@@ -688,7 +688,7 @@ h3 {
   transition: background 160ms ease, transform 160ms ease, box-shadow 160ms ease;
 }
 
-.reward-close:hover {
+.reward-claim:hover {
   background: var(--accent-strong);
   box-shadow: 0 10px 24px rgba(23, 107, 92, 0.18);
   transform: translateY(-1px);

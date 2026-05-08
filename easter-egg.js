@@ -1,6 +1,6 @@
 const easterImage = document.getElementById("easter-carousel-image");
 const rewardModal = document.getElementById("reward-modal");
-const rewardClose = document.getElementById("reward-close");
+const rewardClaim = document.getElementById("reward-claim");
 
 if (window.sessionStorage.getItem("easterUnlocked") !== "true") {
   window.location.replace("index.html");
@@ -11,8 +11,9 @@ if (window.sessionStorage.getItem("easterUnlocked") !== "true") {
   }, 480);
 }
 
-if (rewardClose && rewardModal) {
-  rewardClose.addEventListener("click", () => {
+if (rewardClaim && rewardModal) {
+  rewardClaim.addEventListener("click", () => {
+    window.location.href = "weixin://";
     rewardModal.classList.remove("is-open");
 
     window.setTimeout(() => {
