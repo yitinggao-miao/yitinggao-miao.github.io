@@ -1,9 +1,24 @@
 const easterImage = document.getElementById("easter-carousel-image");
+const rewardModal = document.getElementById("reward-modal");
+const rewardClose = document.getElementById("reward-close");
 
 if (window.sessionStorage.getItem("easterUnlocked") !== "true") {
   window.location.replace("index.html");
-} else {
-  window.alert("凭此兑换520现金奖励");
+} else if (rewardModal) {
+  window.setTimeout(() => {
+    rewardModal.hidden = false;
+    rewardModal.classList.add("is-open");
+  }, 480);
+}
+
+if (rewardClose && rewardModal) {
+  rewardClose.addEventListener("click", () => {
+    rewardModal.classList.remove("is-open");
+
+    window.setTimeout(() => {
+      rewardModal.hidden = true;
+    }, 220);
+  });
 }
 
 if (easterImage) {

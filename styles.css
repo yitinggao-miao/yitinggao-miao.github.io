@@ -603,6 +603,97 @@ h3 {
   text-wrap: balance;
 }
 
+.reward-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 1.2rem;
+  background: rgba(20, 32, 27, 0.46);
+  backdrop-filter: blur(16px);
+  opacity: 0;
+  transition: opacity 220ms ease;
+}
+
+.reward-modal.is-open {
+  opacity: 1;
+}
+
+.reward-modal[hidden] {
+  display: none;
+}
+
+.reward-card {
+  width: min(100%, 390px);
+  padding: 2rem 1.55rem 1.45rem;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(251, 244, 232, 0.94)),
+    var(--surface-warm);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.32);
+  color: var(--text);
+  text-align: center;
+  transform: translateY(10px) scale(0.98);
+  transition: transform 220ms ease;
+}
+
+.reward-modal.is-open .reward-card {
+  transform: translateY(0) scale(1);
+}
+
+.reward-kicker {
+  margin-bottom: 0.8rem;
+  color: var(--gold);
+  font-size: 0.74rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.reward-card h1 {
+  margin-bottom: 0.1rem;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.8rem, 7vw, 2.55rem);
+  line-height: 1.05;
+}
+
+.reward-amount {
+  margin: 0.35rem 0 0.05rem;
+  color: var(--accent-strong);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(4.4rem, 18vw, 7rem);
+  font-weight: 700;
+  line-height: 0.9;
+}
+
+.reward-copy {
+  margin-bottom: 1.35rem;
+  color: var(--blue);
+  font-size: 1.05rem;
+  font-weight: 850;
+}
+
+.reward-close {
+  min-height: 42px;
+  padding: 0.55rem 1.2rem;
+  border: 1px solid rgba(23, 107, 92, 0.28);
+  border-radius: 7px;
+  background: var(--accent);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 850;
+  transition: background 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.reward-close:hover {
+  background: var(--accent-strong);
+  box-shadow: 0 10px 24px rgba(23, 107, 92, 0.18);
+  transform: translateY(-1px);
+}
+
 @media (max-width: 840px) {
   .site-header {
     padding-inline: 1rem;
